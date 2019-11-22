@@ -106,6 +106,14 @@ class InAppBrowserWebViewController: UIViewController, UIScrollViewDelegate, WKU
     var WKNavigationMap: [String: [String: Any]] = [:]
     var startPageTime: Int64 = 0
     var viewPrepared = false
+    override var isModalInPresentation : Bool {
+        get {
+            return true
+        }
+        set {
+
+        }
+    }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
